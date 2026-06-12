@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KDV Hesaplama - KDV Dahil/Hariç Fiyat Hesapla | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz KDV hesaplama aracı. KDV dahil veya hariç fiyatı anında hesaplayın. %1, %10, %20 KDV oranlarını destekler. Formülsüz, anında sonuç.">
+  <meta name="keywords" content="kdv hesaplama, kdv dahil hesaplama, kdv hariç hesaplama, kdv hesaplayıcı, katma değer vergisi hesaplama">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/kdv-hesaplama.html">
+
+  <meta property="og:title" content="KDV Hesaplama - Anında KDV Hesapla">
+  <meta property="og:description" content="KDV dahil veya hariç fiyatı anında hesaplayın. %1, %10, %20 KDV oranları.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hesaparaclari.com/tools/kdv-hesaplama.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "KDV Hesaplama",
+    "description": "Ücretsiz online KDV hesaplama aracı. KDV dahil/hariç fiyat hesapla.",
+    "url": "https://hesaparaclari.com/tools/kdv-hesaplama.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://hesaparaclari.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Araçlar", "item": "https://hesaparaclari.com/tools/"},
+      {"@type": "ListItem", "position": 3, "name": "KDV Hesaplama", "item": "https://hesaparaclari.com/tools/kdv-hesaplama.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "KDV oranları nelerdir?", "acceptedAnswer": {"@type": "Answer", "text": "Türkiye'de KDV oranları %1, %10 ve %20 olarak uygulanmaktadır. Gıda ürünlerinde %1, hizmet sektöründe %10, genel mal ve hizmetlerde ise %20 KDV oranı geçerlidir."}},
+      {"@type": "Question", "name": "KDV dahil fiyattan KDV nasıl çıkarılır?", "acceptedAnswer": {"@type": "Answer", "text": "KDV dahil fiyattan KDV çıkarmak için: KDV hariç fiyat = KDV dahil fiyat / (1 + KDV oranı/100) formülü kullanılır. Örneğin %20 KDV ile 120 TL'den KDV çıkarmak için: 120 / 1.20 = 100 TL."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">✦ HesapAraçları</a>
+    <ul class="nav-links">
+            <li><a href="/">Ana Sayfa</a></li>
+      <li data-dropdown>
+        <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
+          Araçlar <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="dd-menu" role="menu">
+          <div class="dd-arrow"></div>
+          <span class="dd-section-label">💰 Finans</span>
+          <div class="dd-grid">
+            <a href="/tools/kdv-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(99,102,241,.12)">🧾</div><div><div class="dd-item-name">KDV Hesaplama</div></div></a>
+            <a href="/tools/faiz-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📈</div><div><div class="dd-item-name">Faiz Hesaplama</div></div></a>
+            <a href="/tools/yuzde-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(34,197,94,.12)">%</div><div><div class="dd-item-name">Yüzde Hesaplama</div></div></a>
+            <a href="/tools/indirim-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(245,158,11,.12)">🏷️</div><div><div class="dd-item-name">İndirim Hesaplama</div></div></a>
+          </div>
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">🎓 Öğrenci</span>
+          <div class="dd-grid">
+            <a href="/tools/not-ortalamasi.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📚</div><div><div class="dd-item-name">Not Ortalaması</div></div></a>
+            <a href="/tools/vize-final-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(99,102,241,.12)">📝</div><div><div class="dd-item-name">Vize Final</div></div></a>
+            <a href="/tools/yks-puan-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(34,197,94,.12)">🎓</div><div><div class="dd-item-name">YKS Puan</div></div></a>
+          </div>
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">📄 PDF Araçları</span>
+          <div class="dd-grid">
+            <a href="/tools/pdf/pdf-sikistir.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🗜️</div><div><div class="dd-item-name">PDF Sıkıştır</div></div></a>
+            <a href="/tools/pdf/pdf-birlestir.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📎</div><div><div class="dd-item-name">PDF Birleştir</div></div></a>
+            <a href="/tools/pdf/pdf-bol.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">✂️</div><div><div class="dd-item-name">PDF Böl</div></div></a>
+            <a href="/tools/pdf/pdf-gorsel-donustur.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🖼️</div><div><div class="dd-item-name">PDF → Görsel</div></div></a>
+            <a href="/tools/pdf/gorsel-pdf-donustur.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📄</div><div><div class="dd-item-name">Görsel → PDF</div></div></a>
+          </div>
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">📅 Günlük</span>
+          <div class="dd-grid dd-grid-2">
+            <a href="/tools/yas-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(245,158,11,.12)">🎂</div><div><div class="dd-item-name">Yaş Hesaplama</div></div></a>
+            <a href="/tools/bmi-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">⚖️</div><div><div class="dd-item-name">BMI Hesaplama</div></div></a>
+          </div>
+          <div class="dd-divider"></div>
+          <div class="dd-footer"><span class="dd-count">14 araç</span><a href="/tools/" class="dd-footer-link">Tümünü gör <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+        </div>
+      </li>
+      <li><a href="/about.html">Hakkında</a></li>
+      <li><a href="/contact.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir"></button>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a>
+  <a href="/tools/kdv-hesaplama.html">🧾 KDV Hesaplama</a>
+  <a href="/tools/faiz-hesaplama.html">📈 Faiz Hesaplama</a>
+  <a href="/tools/yuzde-hesaplama.html">% Yüzde Hesaplama</a>
+  <a href="/tools/indirim-hesaplama.html">🏷️ İndirim Hesaplama</a>
+  <a href="/tools/bmi-hesaplama.html">⚖️ BMI Hesaplama</a>
+</div>
+
+<div style="max-width:1280px; margin: 0.75rem auto; padding: 0 1.5rem;">
+  <div class="ad-banner ad-banner-top">REKLAM ALANI · 728×90</div>
+</div>
+
+<!-- TOOL HERO -->
+<div class="tool-hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Ana Sayfa</a>
+    <span class="sep" aria-hidden="true">›</span>
+    <a href="/tools/">Araçlar</a>
+    <span class="sep" aria-hidden="true">›</span>
+    <span class="current">KDV Hesaplama</span>
+  </nav>
+
+  <div class="tool-hero-badge">💰 Finans Araçları</div>
+  <h1>KDV Hesaplama</h1>
+  <p class="tool-hero-desc">
+    KDV dahil veya hariç tutarı anında hesaplayın. %1, %10 ve %20 KDV oranlarını destekler.
+  </p>
+</div>
+
+<!-- TOOL LAYOUT -->
+<div class="tool-layout">
+  <main>
+    <!-- TOOL UI -->
+    <div class="tool-card-ui" id="kdvForm">
+      <div class="radio-tabs" role="tablist" aria-label="KDV hesaplama modu">
+        <button class="radio-tab active" data-mode="haric" role="tab" aria-selected="true">KDV'siz fiyattan hesapla</button>
+        <button class="radio-tab" data-mode="dahil" role="tab" aria-selected="false">KDV'li fiyattan hesapla</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="kdvAmount">Tutar (₺)</label>
+        <input class="form-input" type="number" id="kdvAmount" placeholder="Örn: 1000" min="0" step="0.01" inputmode="decimal">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="kdvRate">KDV Oranı</label>
+        <select class="form-select" id="kdvRate">
+          <option value="1">%1 — Temel gıda, tarım ürünleri</option>
+          <option value="10">%10 — Hizmetler, bazı gıda</option>
+          <option value="20" selected>%20 — Genel oran (standart)</option>
+        </select>
+      </div>
+
+      <!-- RESULT -->
+      <div class="result-card" id="kdvResult" role="region" aria-label="KDV hesaplama sonucu" aria-live="polite">
+        <div class="result-label" id="kdvMainLabel">KDV Dahil Toplam</div>
+        <div class="result-value" id="kdvMainResult">0,00 ₺</div>
+
+        <div class="result-breakdown">
+          <div class="result-item">
+            <div class="result-item-label">Matrah (KDV Hariç)</div>
+            <div class="result-item-value" id="kdvBase">0,00 ₺</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">KDV Tutarı</div>
+            <div class="result-item-value" id="kdvTutar">0,00 ₺</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">KDV Dahil Toplam</div>
+            <div class="result-item-value" id="kdvTotal">0,00 ₺</div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn btn-ghost" id="copyKDV" onclick="document.getElementById('copyKDV').click()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            Kopyala
+          </button>
+          <button class="btn btn-ghost" onclick="shareResult('KDV Hesaplama', document.getElementById('kdvMainResult').textContent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            Paylaş
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AD MID -->
+    <div class="ad-banner ad-banner-mid">REKLAM ALANI · 336×280</div>
+
+    <!-- HOW TO USE -->
+    <div class="tool-card-ui">
+      <h2 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; letter-spacing: -0.01em;">
+        Nasıl Kullanılır?
+      </h2>
+      <div class="how-to-steps">
+        <div class="how-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <strong>Hesaplama modunu seçin</strong>
+            <p>KDV'siz fiyattan KDV dahil fiyat bulmak mı, yoksa KDV dahil fiyattan KDV çıkarmak mı istediğinizi seçin.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <strong>Tutarı girin</strong>
+            <p>Hesaplamak istediğiniz fiyatı kuruş hassasiyetiyle girin.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <strong>KDV oranını seçin</strong>
+            <p>%1, %10 veya %20 oranlarından ürün/hizmetinize uygun olanı seçin.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <strong>Sonucu görün</strong>
+            <p>Matrah, KDV tutarı ve toplam fiyat anında hesaplanır. Sonucu kopyalayabilirsiniz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="tool-card-ui">
+      <h2 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.01em;">
+        KDV Hakkında Bilmeniz Gerekenler
+      </h2>
+      <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.8; margin-bottom: 0.875rem;">
+        Katma Değer Vergisi (KDV), Türkiye'de mal ve hizmetler üzerinden alınan dolaylı bir vergidir.
+        2024 yılı itibarıyla Türkiye'de üç farklı KDV oranı uygulanmaktadır: temel gıda ve tarım ürünlerinde 
+        <strong style="color: var(--text);">%1</strong>, bazı gıda ürünleri ve hizmetlerde 
+        <strong style="color: var(--text);">%10</strong>, genel mal ve hizmetlerde ise 
+        <strong style="color: var(--text);">%20</strong>.
+      </p>
+      <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.8;">
+        KDV hesaplama formülü şöyledir: KDV Dahil Fiyat = Matrah × (1 + KDV Oranı/100). 
+        Tersine, KDV dahil bir fiyattan matrahı bulmak için: Matrah = KDV Dahil Fiyat / (1 + KDV Oranı/100) formülü kullanılır.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="tool-card-ui">
+      <h2 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 1.25rem; letter-spacing: -0.01em;">
+        Sık Sorulan Sorular
+      </h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Türkiye'deki KDV oranları nelerdir?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Türkiye'de %1 (temel gıda, tarım), %10 (bazı gıda ürünleri, hizmetler) ve %20 (genel oran) olmak üzere 
+              üç KDV oranı mevcuttur. 2023 yılında standart oran %18'den %20'ye yükseltilmiştir.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            KDV dahil fiyattan KDV nasıl çıkarılır?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Formül: Matrah = Toplam Fiyat ÷ (1 + oran/100). %20 KDV için 120 ₺'den KDV çıkarmak: 120 ÷ 1,20 = 100 ₺ matrah, 20 ₺ KDV.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Hangi ürünler %1 KDV'ye tabidir?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Temel gıda maddeleri (ekmek, süt, yumurta vb.), çiftçi ürünleri, basılı kitaplar ve bazı 
+              tarımsal girdiler %1 KDV oranına tabidir.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height: 250px;">REKLAM · 300×250</div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/faiz-hesaplama.html" class="similar-tool-link">
+        <div class="similar-tool-icon">📈</div>
+        Faiz Hesaplama
+      </a>
+      <a href="/tools/yuzde-hesaplama.html" class="similar-tool-link">
+        <div class="similar-tool-icon">%</div>
+        Yüzde Hesaplama
+      </a>
+      <a href="/tools/indirim-hesaplama.html" class="similar-tool-link">
+        <div class="similar-tool-icon">🏷️</div>
+        İndirim Hesaplama
+      </a>
+      <a href="/tools/bmi-hesaplama.html" class="similar-tool-link">
+        <div class="similar-tool-icon">⚖️</div>
+        BMI Hesaplama
+      </a>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Hızlı Linkler</div>
+      <a href="/" class="similar-tool-link">
+        <div class="similar-tool-icon">🏠</div>
+        Ana Sayfa
+      </a>
+      <a href="/tools/" class="similar-tool-link">
+        <div class="similar-tool-icon">🔧</div>
+        Tüm Araçlar
+      </a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">✦ HesapAraçları</a>
+      <p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Finans</div>
+      <ul class="footer-links">
+        <li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li>
+        <li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li>
+        <li><a href="/tools/yuzde-hesaplama.html">Yüzde Hesaplama</a></li>
+        <li><a href="/tools/indirim-hesaplama.html">İndirim Hesaplama</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Öğrenci</div>
+      <ul class="footer-links">
+        <li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li>
+        <li><a href="/tools/vize-final-hesaplama.html">Vize Final</a></li>
+        <li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <ul class="footer-links">
+        <li><a href="/about.html">Hakkımızda</a></li>
+        <li><a href="/contact.html">İletişim</a></li>
+        <li><a href="/privacy-policy.html">Gizlilik</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 HesapAraçları. Tüm hakları saklıdır.</p>
+    <p class="footer-copy">Sonuçlar bilgi amaçlıdır.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Başa dön">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+</body>
+</html>

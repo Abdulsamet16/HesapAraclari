@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaş Hesaplama - Doğum Tarihinden Yaş Hesapla | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz yaş hesaplama aracı. Doğum tarihinizi girerek yaşınızı yıl, ay ve gün olarak öğrenin. Sonraki doğum gününüze kaç gün kaldığını görün.">
+  <meta name="keywords" content="yaş hesaplama, doğum tarihinden yaş hesaplama, kaç yaşındayım, yaş hesaplayıcı, doğum günü hesaplama">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/yas-hesaplama.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo">✦ HesapAraçları</a>
+  <ul class="nav-links"><li><a href="/">Ana Sayfa</a></li><li><a href="/tools/">Araçlar</a></li><li><a href="/about.html">Hakkında</a></li></ul>
+  <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Tema"></button><button class="hamburger" id="hamburger" aria-label="Menü"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a><a href="/tools/yas-hesaplama.html">🎂 Yaş Hesaplama</a><a href="/tools/bmi-hesaplama.html">⚖️ BMI Hesaplama</a>
+</div>
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem"><div class="ad-banner ad-banner-top">REKLAM · 728×90</div></div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb"><a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/tools/">Araçlar</a><span class="sep">›</span><span class="current">Yaş Hesaplama</span></nav>
+  <div class="tool-hero-badge">📅 Günlük Araçlar</div>
+  <h1>Yaş Hesaplama</h1>
+  <p class="tool-hero-desc">Doğum tarihinizi girerek yaşınızı yıl, ay ve gün olarak öğrenin. Sonraki doğum gününüze kaç gün kaldığını da görün.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui" id="yasForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="dogumTarihi">Doğum Tarihi</label>
+          <input class="form-input" type="date" id="dogumTarihi" max="2025-12-31">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="hesaplamaTarihi">Hesaplama Tarihi</label>
+          <input class="form-input" type="date" id="hesaplamaTarihi">
+        </div>
+      </div>
+
+      <div class="result-card" id="yasResult" role="region" aria-live="polite">
+        <div class="result-label">Yaşınız</div>
+        <div style="display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem">
+          <div class="result-value" id="yasYil">0</div>
+          <span style="color:var(--muted);font-size:1.1rem">yıl</span>
+          <div class="result-value" style="font-size:1.4rem" id="yasAy">0</div>
+          <span style="color:var(--muted);font-size:1.1rem">ay</span>
+          <div class="result-value" style="font-size:1.4rem" id="yasGun">0</div>
+          <span style="color:var(--muted);font-size:1.1rem">gün</span>
+        </div>
+        <div class="result-breakdown">
+          <div class="result-item">
+            <div class="result-item-label">Toplam Gün</div>
+            <div class="result-item-value" id="yasToplamGun">0</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Sonraki Doğum Günü</div>
+            <div class="result-item-value" id="yasSonrakiDogumGun">—</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Toplam Hafta</div>
+            <div class="result-item-value" id="yasToplamHafta">0</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Toplam Saat (yaklaşık)</div>
+            <div class="result-item-value" id="yasToplamSaat">0</div>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-ghost" onclick="copyToClipboard(document.getElementById('yasYil').textContent + ' yıl ' + document.getElementById('yasAy').textContent + ' ay ' + document.getElementById('yasGun').textContent + ' gün')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Kopyala
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Nasıl Kullanılır?</h2>
+      <div class="how-to-steps">
+        <div class="how-step"><div class="step-num">1</div><div class="step-content"><strong>Doğum tarihini girin</strong><p>Gün, ay ve yılı içeren doğum tarihinizi seçin.</p></div></div>
+        <div class="how-step"><div class="step-num">2</div><div class="step-content"><strong>Hesaplama tarihini seçin</strong><p>Varsayılan olarak bugünün tarihi kullanılır. İstediğiniz tarihe göre değiştirebilirsiniz.</p></div></div>
+        <div class="how-step"><div class="step-num">3</div><div class="step-content"><strong>Sonucu görün</strong><p>Yaşınız yıl, ay ve gün olarak; sonraki doğum gününüze kaç gün kaldığı da gösterilir.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Sık Sorulan Sorular</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Yaş hesaplaması nasıl yapılır?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yaş hesaplaması için bugünün tarihinden doğum tarihi çıkarılır. Ay ve gün farkı da hesaba katılarak tam yıl, ay ve gün olarak sonuç verilir.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Artık yıl yaş hesaplamayı etkiler mi?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Evet, araçımız artık yılları (366 gün) hesaba katar. Toplam gün sayısı hesaplanırken her yıl için gerçek gün sayısı kullanılır.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Farklı bir tarihe göre yaş hesaplayabilir miyim?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Evet! "Hesaplama Tarihi" alanını değiştirerek geçmiş veya gelecekteki herhangi bir tarihe göre yaş hesaplayabilirsiniz.</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/bmi-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">⚖️</div>BMI Hesaplama</a>
+      <a href="/tools/indirim-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🏷️</div>İndirim Hesaplama</a>
+      <a href="/tools/yuzde-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">%</div>Yüzde Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="logo">✦ HesapAraçları</a><p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p></div><div><div class="footer-col-title">Finans</div><ul class="footer-links"><li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li><li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li></ul></div><div><div class="footer-col-title">Günlük</div><ul class="footer-links"><li><a href="/tools/yas-hesaplama.html">Yaş Hesaplama</a></li><li><a href="/tools/bmi-hesaplama.html">BMI Hesaplama</a></li></ul></div><div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="/about.html">Hakkımızda</a></li><li><a href="/privacy-policy.html">Gizlilik</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 HesapAraçları.</p></div></footer>
+<button class="back-to-top" id="backToTop" aria-label="Başa dön"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+<script>
+  // Set today's date as default for hesaplamaTarihi
+  const today = new Date().toISOString().split('T')[0];
+  const hesapEl = document.getElementById('hesaplamaTarihi');
+  if (hesapEl) {
+    hesapEl.value = today;
+    hesapEl.max = today;
+  }
+
+  // Extended yaş hesaplama with hesaplamaTarihi support
+  const yasForm = document.getElementById('yasForm');
+  if (yasForm) {
+    yasForm.addEventListener('input', function() {
+      const dogum = new Date(document.getElementById('dogumTarihi').value);
+      const hedef = new Date(document.getElementById('hesaplamaTarihi').value || today);
+      if (isNaN(dogum) || isNaN(hedef) || dogum > hedef) {
+        document.getElementById('yasResult').classList.remove('show');
+        return;
+      }
+      let yas = hedef.getFullYear() - dogum.getFullYear();
+      let ay = hedef.getMonth() - dogum.getMonth();
+      let gun = hedef.getDate() - dogum.getDate();
+      if (gun < 0) { ay--; gun += new Date(hedef.getFullYear(), hedef.getMonth(), 0).getDate(); }
+      if (ay < 0) { yas--; ay += 12; }
+      let sonrakiDG = new Date(hedef.getFullYear(), dogum.getMonth(), dogum.getDate());
+      if (sonrakiDG <= hedef) sonrakiDG.setFullYear(hedef.getFullYear() + 1);
+      const kalanGun = Math.ceil((sonrakiDG - hedef) / 86400000);
+      const toplamGun = Math.floor((hedef - dogum) / 86400000);
+      const toplamHafta = Math.floor(toplamGun / 7);
+      const toplamSaat = (toplamGun * 24).toLocaleString('tr-TR');
+      document.getElementById('yasYil').textContent = yas;
+      document.getElementById('yasAy').textContent = ay;
+      document.getElementById('yasGun').textContent = gun;
+      document.getElementById('yasToplamGun').textContent = toplamGun.toLocaleString('tr-TR');
+      document.getElementById('yasToplamHafta').textContent = toplamHafta.toLocaleString('tr-TR');
+      document.getElementById('yasToplamSaat').textContent = toplamSaat;
+      document.getElementById('yasSonrakiDogumGun').textContent = kalanGun + ' gün';
+      document.getElementById('yasResult').classList.add('show');
+    });
+  }
+</script>
+</body>
+</html>

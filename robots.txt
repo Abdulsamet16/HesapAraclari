@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hesaparaclari.com/sitemap.xml
+
+# Block asset directories from indexing
+Disallow: /assets/

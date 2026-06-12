@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HesapAraçları - Ücretsiz Online Hesaplama Araçları | KDV, Faiz, YKS</title>
+  <meta name="description" content="Türkiye'nin en hızlı hesaplama araçları. KDV hesaplama, faiz hesaplama, YKS puan, not ortalaması, BMI ve daha fazlası. Ücretsiz, reklamsız, anında sonuç.">
+  <meta name="keywords" content="hesaplama araçları, kdv hesaplama, faiz hesaplama, yks puan hesaplama, not ortalaması, bmi hesaplama, yaş hesaplama, online hesap makinesi">
+  <meta name="author" content="HesapAraçları">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://hesaparaclari.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HesapAraçları - Ücretsiz Online Hesaplama Araçları">
+  <meta property="og:description" content="Türkiye'nin en hızlı hesaplama araçları. KDV, faiz, YKS, not ortalaması ve çok daha fazlası.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hesaparaclari.com/">
+  <meta property="og:image" content="https://hesaparaclari.com/assets/images/og.png">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:site_name" content="HesapAraçları">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HesapAraçları - Ücretsiz Online Hesaplama Araçları">
+  <meta name="twitter:description" content="Türkiye'nin en hızlı hesaplama araçları.">
+  <meta name="twitter:image" content="https://hesaparaclari.com/assets/images/og.png">
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HesapAraçları",
+    "url": "https://hesaparaclari.com",
+    "description": "Türkiye'nin en hızlı ücretsiz online hesaplama araçları platformu.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://hesaparaclari.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "HesapAraçları ücretsiz mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, tüm hesaplama araçlarımız tamamen ücretsizdir. Kayıt gerektirmez, sınırsız kullanabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hesaplamalar ne kadar doğru?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tüm hesaplamalarımız güncel Türkiye mevzuatına ve standartlarına göre yapılmaktadır. Sonuçlar yalnızca bilgi amaçlıdır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hangi araçları kullanabilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KDV hesaplama, faiz hesaplama, YKS puan hesaplama, not ortalaması, BMI, yaş hesaplama ve çok daha fazlası için araçlarımızı kullanabilirsiniz."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" role="navigation" aria-label="Ana menü">
+  <div class="navbar-inner">
+    <a href="/" class="logo" aria-label="HesapAraçları Ana Sayfa">
+      ✦ HesapAraçları
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="/">Ana Sayfa</a></li>
+
+      <li data-dropdown>
+        <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
+          Araçlar
+          <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="dd-menu" role="menu">
+          <div class="dd-arrow"></div>
+
+          <span class="dd-section-label">💰 Finans</span>
+          <div class="dd-grid">
+            <a href="/tools/kdv-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(99,102,241,.12)">🧾</div>
+              <div><div class="dd-item-name">KDV Hesaplama</div><div class="dd-item-desc">%1 %10 %20 oranları</div></div>
+            </a>
+            <a href="/tools/faiz-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📈</div>
+              <div><div class="dd-item-name">Faiz Hesaplama</div><div class="dd-item-desc">Basit faiz hesabı</div></div>
+            </a>
+            <a href="/tools/yuzde-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(34,197,94,.12)">%</div>
+              <div><div class="dd-item-name">Yüzde Hesaplama</div><div class="dd-item-desc">Oran, artış, azalış</div></div>
+            </a>
+            <a href="/tools/indirim-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(245,158,11,.12)">🏷️</div>
+              <div><div class="dd-item-name">İndirim Hesaplama</div><div class="dd-item-desc">İndirimli fiyat bul</div></div>
+            </a>
+          </div>
+
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">🎓 Öğrenci</span>
+          <div class="dd-grid">
+            <a href="/tools/not-ortalamasi.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📚</div>
+              <div><div class="dd-item-name">Not Ortalaması</div><div class="dd-item-desc">GANO / AGNO</div></div>
+            </a>
+            <a href="/tools/vize-final-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(99,102,241,.12)">📝</div>
+              <div><div class="dd-item-name">Vize Final</div><div class="dd-item-desc">Geçme notu hesabı</div></div>
+            </a>
+            <a href="/tools/yks-puan-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(34,197,94,.12)">🎓</div>
+              <div><div class="dd-item-name">YKS Puan</div><div class="dd-item-desc">SAY / EA / SÖZ</div></div>
+            </a>
+          </div>
+
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">📄 PDF Araçları</span>
+          <div class="dd-grid">
+            <a href="/tools/pdf/pdf-sikistir.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🗜️</div>
+              <div><div class="dd-item-name">PDF Sıkıştır</div><div class="dd-item-desc">Boyutu küçült</div></div>
+            </a>
+            <a href="/tools/pdf/pdf-birlestir.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📎</div>
+              <div><div class="dd-item-name">PDF Birleştir</div><div class="dd-item-desc">Dosyaları tek yap</div></div>
+            </a>
+            <a href="/tools/pdf/pdf-bol.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">✂️</div>
+              <div><div class="dd-item-name">PDF Böl</div><div class="dd-item-desc">Sayfaları ayır</div></div>
+            </a>
+            <a href="/tools/pdf/pdf-gorsel-donustur.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🖼️</div>
+              <div><div class="dd-item-name">PDF → Görsel</div><div class="dd-item-desc">JPEG / PNG çıkart</div></div>
+            </a>
+            <a href="/tools/pdf/gorsel-pdf-donustur.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📄</div>
+              <div><div class="dd-item-name">Görsel → PDF</div><div class="dd-item-desc">Fotoğrafı PDF yap</div></div>
+            </a>
+          </div>
+
+          <div class="dd-divider"></div>
+          <span class="dd-section-label">📅 Günlük</span>
+          <div class="dd-grid dd-grid-2">
+            <a href="/tools/yas-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(245,158,11,.12)">🎂</div>
+              <div><div class="dd-item-name">Yaş Hesaplama</div><div class="dd-item-desc">Yıl, ay, gün</div></div>
+            </a>
+            <a href="/tools/bmi-hesaplama.html" class="dd-item" role="menuitem">
+              <div class="dd-item-icon" style="background:rgba(239,68,68,.1)">⚖️</div>
+              <div><div class="dd-item-name">BMI Hesaplama</div><div class="dd-item-desc">Vücut kitle indeksi</div></div>
+            </a>
+          </div>
+
+          <div class="dd-divider"></div>
+          <div class="dd-footer">
+            <span class="dd-count">14 araç mevcut</span>
+            <a href="/tools/" class="dd-footer-link">
+              Tümünü gör
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/about.html">Hakkında</a></li>
+      <li><a href="/contact.html">İletişim</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir"></button>
+      <button class="hamburger" id="hamburger" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobil menü">
+  <a href="/">🏠 Ana Sayfa</a>
+  <a href="/tools/">🔧 Tüm Araçlar</a>
+  <a href="/tools/kdv-hesaplama.html">🧾 KDV Hesaplama</a>
+  <a href="/tools/faiz-hesaplama.html">📈 Faiz Hesaplama</a>
+  <a href="/tools/yuzde-hesaplama.html">% Yüzde Hesaplama</a>
+  <a href="/tools/not-ortalamasi.html">📚 Not Ortalaması</a>
+  <a href="/tools/bmi-hesaplama.html">⚖️ BMI Hesaplama</a>
+  <a href="/tools/pdf/pdf-sikistir.html">🗜️ PDF Sıkıştır</a>
+  <a href="/tools/pdf/pdf-birlestir.html">📎 PDF Birleştir</a>
+  <a href="/tools/pdf/pdf-bol.html">✂️ PDF Böl</a>
+  <a href="/tools/pdf/pdf-gorsel-donustur.html">🖼️ PDF → Görsel</a>
+  <a href="/tools/pdf/gorsel-pdf-donustur.html">📄 Görsel → PDF</a>
+  <a href="/about.html">ℹ️ Hakkında</a>
+  <a href="/contact.html">📧 İletişim</a>
+</div>
+
+<!-- AD BANNER TOP -->
+<div style="max-width:1280px; margin: 0.75rem auto; padding: 0 1.5rem;">
+  <div class="ad-banner ad-banner-top" aria-label="Reklam alanı">REKLAM ALANI · 728×90</div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+
+  <div class="hero-badge" aria-label="Yeni araçlar eklendi">
+    <span class="hero-badge-dot" aria-hidden="true"></span>
+    Türkiye'nin en hızlı hesaplama platformu
+  </div>
+
+  <h1 id="hero-heading">
+    Her hesaplama aracı<br>
+    <span class="gradient-text">tek bir yerde</span>
+  </h1>
+
+  <p class="hero-desc">
+    KDV'den faize, YKS'den BMI'ya — ihtiyacınız olan tüm hesaplama araçları burada. 
+    Ücretsiz, hızlı, doğru sonuçlar.
+  </p>
+
+  <!-- SEARCH -->
+  <div class="search-wrapper" role="search">
+    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input
+      type="search"
+      class="search-bar"
+      id="searchInput"
+      placeholder="Araç ara... (örn: KDV, faiz, BMI)"
+      autocomplete="off"
+      aria-label="Hesaplama aracı ara"
+      aria-autocomplete="list"
+      aria-controls="searchResults"
+    >
+    <div class="search-results" id="searchResults" role="listbox" aria-label="Arama sonuçları"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="hero-stats" aria-label="Platform istatistikleri">
+    <div class="stat-item">
+      <span class="stat-number">9+</span>
+      <span class="stat-label">Hesaplama Aracı</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">%100</span>
+      <span class="stat-label">Ücretsiz</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">0</span>
+      <span class="stat-label">Kayıt Gerekli</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">⚡ Anında</span>
+      <span class="stat-label">Sonuç</span>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" aria-labelledby="categories-heading">
+  <div class="section-header">
+    <span class="section-label">Kategoriler</span>
+    <h2 class="section-title" id="categories-heading">Ne hesaplamak istiyorsunuz?</h2>
+    <p class="section-desc">İhtiyacınıza göre kategori seçin, aradığınız araca hızlıca ulaşın.</p>
+  </div>
+
+  <div class="categories-grid" role="list">
+    <a href="#finans" class="category-card cat-finans" role="listitem">
+      <div class="cat-icon" aria-hidden="true">💰</div>
+      <div class="cat-title">Finans Araçları</div>
+      <p class="cat-desc">KDV, faiz, yüzde hesaplama ve daha fazlası.</p>
+      <div class="cat-count">4 araç →</div>
+    </a>
+    <a href="#ogrenci" class="category-card cat-ogrenci" role="listitem">
+      <div class="cat-icon" aria-hidden="true">🎓</div>
+      <div class="cat-title">Öğrenci Araçları</div>
+      <p class="cat-desc">Not ortalaması, vize-final hesaplama, YKS puanı.</p>
+      <div class="cat-count">3 araç →</div>
+    </a>
+    <a href="#gunluk" class="category-card cat-sosyal" role="listitem">
+      <div class="cat-icon" aria-hidden="true">📅</div>
+      <div class="cat-title">Günlük Araçlar</div>
+      <p class="cat-desc">Yaş, BMI ve pratik hesaplama araçları.</p>
+      <div class="cat-count">2 araç →</div>
+    </a>
+    <a href="#pdf" class="category-card cat-pdf" role="listitem">
+      <div class="cat-icon" aria-hidden="true">📄</div>
+      <div class="cat-title">PDF Araçları</div>
+      <p class="cat-desc">PDF birleştir, böl, sıkıştır, görsele dönüştür.</p>
+      <div class="cat-count" style="color:#f87171">5 araç →</div>
+    </a>
+    <a href="#" class="category-card cat-gunluk" role="listitem">
+      <div class="cat-icon" aria-hidden="true">🚀</div>
+      <div class="cat-title">Yakında Geliyor</div>
+      <p class="cat-desc">Döviz, kredi, sosyal medya araçları yolda.</p>
+      <div class="cat-count" style="color: var(--accent-orange);">Takipte kalın →</div>
+    </a>
+  </div>
+</section>
+
+<!-- FINANCE TOOLS -->
+<section class="section" id="finans" aria-labelledby="finans-heading">
+  <div class="section-header">
+    <span class="section-label">Finans Araçları</span>
+    <h2 class="section-title" id="finans-heading">Finansal hesaplamalar</h2>
+    <p class="section-desc">Vergi, faiz ve yüzde hesaplamalarını saniyeler içinde yapın.</p>
+  </div>
+
+  <div class="tools-grid" role="list">
+    <!-- KDV -->
+    <a href="/tools/kdv-hesaplama.html" class="tool-card" role="listitem" aria-label="KDV Hesaplama aracına git">
+      <div class="tool-card-top">
+        <div class="tool-icon" aria-hidden="true">🧾</div>
+        <span class="tool-badge badge-popular">Popüler</span>
+      </div>
+      <div class="tool-name">KDV Hesaplama</div>
+      <p class="tool-desc">KDV dahil veya hariç tutarı anında hesaplayın. %1, %10 ve %20 oranlarını destekler.</p>
+      <div class="tool-cta">
+        Hesapla
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- FAİZ -->
+    <a href="/tools/faiz-hesaplama.html" class="tool-card" role="listitem" aria-label="Faiz Hesaplama aracına git">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(139,92,246,0.12)" aria-hidden="true">📈</div>
+        <span class="tool-badge badge-popular">Popüler</span>
+      </div>
+      <div class="tool-name">Faiz Hesaplama</div>
+      <p class="tool-desc">Aylık veya yıllık basit faiz hesabı yapın. Anapara, faiz tutarı ve toplam görün.</p>
+      <div class="tool-cta">
+        Hesapla
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- YÜZDE -->
+    <a href="/tools/yuzde-hesaplama.html" class="tool-card" role="listitem" aria-label="Yüzde Hesaplama aracına git">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(34,197,94,0.12)" aria-hidden="true">%</div>
+      </div>
+      <div class="tool-name">Yüzde Hesaplama</div>
+      <p class="tool-desc">Yüzde oranı, artış/azalış ve bir sayının yüzdesini kolayca hesaplayın.</p>
+      <div class="tool-cta">
+        Hesapla
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+
+    <!-- İNDİRİM -->
+    <a href="/tools/indirim-hesaplama.html" class="tool-card" role="listitem" aria-label="İndirim Hesaplama aracına git">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(245,158,11,0.12)" aria-hidden="true">🏷️</div>
+        <span class="tool-badge badge-new">Yeni</span>
+      </div>
+      <div class="tool-name">İndirim Hesaplama</div>
+      <p class="tool-desc">Fiyat indirimi sonrası ödeyeceğiniz tutarı ve ne kadar tasarruf ettiğinizi görün.</p>
+      <div class="tool-cta">
+        Hesapla
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- STUDENT TOOLS -->
+<section class="section" id="ogrenci" aria-labelledby="ogrenci-heading">
+  <div class="section-header">
+    <span class="section-label">Öğrenci Araçları</span>
+    <h2 class="section-title" id="ogrenci-heading">Öğrenciler için hesaplamalar</h2>
+    <p class="section-desc">Not ortalaması, geçme notu ve YKS puan tahminleri.</p>
+  </div>
+
+  <div class="tools-grid" role="list">
+    <a href="/tools/not-ortalamasi.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(139,92,246,0.12)" aria-hidden="true">📚</div>
+        <span class="tool-badge badge-popular">Popüler</span>
+      </div>
+      <div class="tool-name">Not Ortalaması Hesaplama</div>
+      <p class="tool-desc">Kredili not ağırlıklı ortalama (GANO/AGNO) ve harf notu hesaplayın.</p>
+      <div class="tool-cta">Hesapla <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="/tools/vize-final-hesaplama.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(99,102,241,0.12)" aria-hidden="true">📝</div>
+      </div>
+      <div class="tool-name">Vize Final Hesaplama</div>
+      <p class="tool-desc">Vize ve final notlarından geçip geçmediğinizi öğrenin. Geçmek için gereken notu görün.</p>
+      <div class="tool-cta">Hesapla <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="/tools/yks-puan-hesaplama.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(34,197,94,0.12)" aria-hidden="true">🎓</div>
+        <span class="tool-badge badge-new">Yeni</span>
+      </div>
+      <div class="tool-name">YKS Puan Hesaplama</div>
+      <p class="tool-desc">SAY, EA ve SÖZ puan türlerine göre tahmini YKS puanınızı hesaplayın.</p>
+      <div class="tool-cta">Hesapla <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- DAILY TOOLS -->
+<section class="section" id="gunluk" aria-labelledby="gunluk-heading">
+  <div class="section-header">
+    <span class="section-label">Günlük Araçlar</span>
+    <h2 class="section-title" id="gunluk-heading">Günlük hesaplamalar</h2>
+    <p class="section-desc">Yaş ve vücut kitle indeksi gibi pratik hesaplamalar.</p>
+  </div>
+
+  <div class="tools-grid" role="list">
+    <a href="/tools/yas-hesaplama.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(245,158,11,0.12)" aria-hidden="true">🎂</div>
+      </div>
+      <div class="tool-name">Yaş Hesaplama</div>
+      <p class="tool-desc">Doğum tarihinden itibaren yaşınızı yıl, ay ve gün olarak öğrenin.</p>
+      <div class="tool-cta">Hesapla <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+
+    <a href="/tools/bmi-hesaplama.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,0.1)" aria-hidden="true">⚖️</div>
+      </div>
+      <div class="tool-name">BMI Hesaplama</div>
+      <p class="tool-desc">Boy ve kilonuzu girerek vücut kitle indeksinizi ve ideal kilo aralığınızı öğrenin.</p>
+      <div class="tool-cta">Hesapla <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- PDF TOOLS -->
+<section class="section" id="pdf" aria-labelledby="pdf-heading">
+  <div class="section-header">
+    <span class="section-label">📄 PDF Araçları</span>
+    <h2 class="section-title" id="pdf-heading">PDF işlemleri</h2>
+    <p class="section-desc">PDF dosyalarınızı tarayıcıda, ücretsiz ve güvenli şekilde işleyin. Sunucuya yüklenmez.</p>
+  </div>
+  <div class="tools-grid" role="list">
+    <a href="/tools/pdf/pdf-sikistir.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,.1)" aria-hidden="true">🗜️</div>
+        <span class="tool-badge badge-popular">Popüler</span>
+      </div>
+      <div class="tool-name">PDF Sıkıştırma</div>
+      <p class="tool-desc">PDF dosyanızın boyutunu kalite kaybını minimize ederek küçültün. E-posta ve paylaşım için ideal.</p>
+      <div class="tool-cta">Sıkıştır <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="/tools/pdf/pdf-birlestir.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,.1)" aria-hidden="true">📎</div>
+      </div>
+      <div class="tool-name">PDF Birleştirme</div>
+      <p class="tool-desc">Birden fazla PDF dosyasını sürükle-bırak ile sıralayın ve tek bir PDF'e birleştirin.</p>
+      <div class="tool-cta">Birleştir <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="/tools/pdf/pdf-bol.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,.1)" aria-hidden="true">✂️</div>
+      </div>
+      <div class="tool-name">PDF Bölme</div>
+      <p class="tool-desc">PDF'inizden belirli sayfaları çıkarın veya sayfa aralıklarına göre ayrı dosyalara bölün.</p>
+      <div class="tool-cta">Böl <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="/tools/pdf/pdf-gorsel-donustur.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,.1)" aria-hidden="true">🖼️</div>
+        <span class="tool-badge badge-new">Yeni</span>
+      </div>
+      <div class="tool-name">PDF → JPEG / PNG</div>
+      <p class="tool-desc">PDF sayfalarını yüksek kaliteli JPEG veya PNG görsel dosyalarına dönüştürün.</p>
+      <div class="tool-cta">Dönüştür <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+    <a href="/tools/pdf/gorsel-pdf-donustur.html" class="tool-card" role="listitem">
+      <div class="tool-card-top">
+        <div class="tool-icon" style="background:rgba(239,68,68,.1)" aria-hidden="true">📄</div>
+        <span class="tool-badge badge-new">Yeni</span>
+      </div>
+      <div class="tool-name">JPEG / PNG → PDF</div>
+      <p class="tool-desc">Fotoğraf veya görsel dosyalarınızı hızlıca profesyonel PDF belgesine dönüştürün.</p>
+      <div class="tool-cta">Dönüştür <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+    </a>
+  </div>
+</section>
+
+<!-- AD MID -->
+<div style="max-width:1280px; margin: 0 auto; padding: 0 1.5rem;">
+  <div class="ad-banner ad-banner-mid" aria-label="Reklam alanı">REKLAM ALANI · 336×280</div>
+</div>
+
+<!-- SEO CONTENT -->
+<section class="section" aria-labelledby="seo-heading">
+  <div class="seo-section">
+    <h2 id="seo-heading">Türkiye'nin En Kapsamlı Ücretsiz Hesaplama Araçları</h2>
+    <p>
+      HesapAraçları, Türkiye'deki kullanıcılar için özel olarak tasarlanmış, tamamen ücretsiz bir online hesaplama platformudur. 
+      Günlük hayatınızda ihtiyaç duyacağınız her türlü hesaplamayı — KDV hesaplama, faiz hesaplama, not ortalaması, yaş hesaplama ve daha fazlasını — 
+      tek bir platformda sunuyoruz.
+    </p>
+    <p>
+      Tüm araçlarımız en güncel Türkiye mevzuatına göre hazırlanmıştır. 
+      KDV hesaplamasında %1, %10 ve %20 oranları, faiz hesaplamasında aylık ve yıllık periyotlar, 
+      YKS puan hesaplamasında SAY, EA ve SÖZ puan türleri desteklenmektedir.
+    </p>
+    <p>
+      Mobil uyumlu tasarımımız sayesinde akıllı telefonunuzdan da kolayca erişebilir, 
+      kayıt olmadan anında sonuç alabilirsiniz. Tüm hesaplamalar cihazınızda gerçek zamanlı olarak yapılır, 
+      verileriniz sunucuya gönderilmez.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" aria-labelledby="faq-heading">
+  <div class="section-header">
+    <span class="section-label">SSS</span>
+    <h2 class="section-title" id="faq-heading">Sık Sorulan Sorular</h2>
+  </div>
+
+  <div class="faq-list" role="list">
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false">
+        HesapAraçları tamamen ücretsiz mi?
+        <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Evet, tüm hesaplama araçlarımız tamamen ücretsizdir. Herhangi bir kayıt veya üyelik gerekmez. 
+          Sınırsız sayıda hesaplama yapabilirsiniz. Platform; reklam gelirleriyle sürdürülmektedir.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false">
+        Hesaplama sonuçları ne kadar doğru?
+        <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Tüm hesaplamalarımız güncel Türkiye mevzuatına ve standartlarına göre yapılmaktadır. 
+          Ancak sonuçlar yalnızca bilgi amaçlıdır; kesin veriler için ilgili uzmanlardan destek almanızı öneririz.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false">
+        Verilerimi kaydediyor musunuz?
+        <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Hayır. Tüm hesaplamalar tarayıcınızda, cihazınızda gerçekleşir. Girdiğiniz hiçbir bilgi 
+          sunucularımıza iletilmez. Gizliliğiniz bizim için önceliklidir.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false">
+        Mobil cihazdan kullanabilir miyim?
+        <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Evet, tüm araçlarımız mobil uyumlu (responsive) tasarıma sahiptir. 
+          Akıllı telefonunuz veya tabletinizden sorunsuz kullanabilirsiniz.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item" role="listitem">
+      <button class="faq-question" aria-expanded="false">
+        Yeni araçlar eklenecek mi?
+        <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Evet! Kira hesaplama, döviz çevirici, kredi hesaplama ve çok daha fazlası yakında platformumuza eklenecek. 
+          Düzenli olarak ziyaret edin.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">✦ HesapAraçları</a>
+      <p class="footer-tagline">
+        Türkiye'nin en hızlı ve güvenilir ücretsiz hesaplama araçları platformu.
+      </p>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Araçlar</div>
+      <ul class="footer-links">
+        <li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li>
+        <li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li>
+        <li><a href="/tools/yuzde-hesaplama.html">Yüzde Hesaplama</a></li>
+        <li><a href="/tools/indirim-hesaplama.html">İndirim Hesaplama</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Öğrenci</div>
+      <ul class="footer-links">
+        <li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li>
+        <li><a href="/tools/vize-final-hesaplama.html">Vize Final</a></li>
+        <li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li>
+        <li><a href="/tools/yas-hesaplama.html">Yaş Hesaplama</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <ul class="footer-links">
+        <li><a href="/about.html">Hakkımızda</a></li>
+        <li><a href="/contact.html">İletişim</a></li>
+        <li><a href="/privacy-policy.html">Gizlilik Politikası</a></li>
+        <li><a href="/sitemap.xml">Site Haritası</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 HesapAraçları. Tüm hakları saklıdır.</p>
+    <p class="footer-copy">Tüm sonuçlar bilgi amaçlıdır.</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Sayfanın başına git">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
+
+<!-- SCRIPTS -->
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/search.js"></script>
+</body>
+</html>

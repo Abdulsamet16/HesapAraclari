@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Görsel'den PDF Oluştur - JPEG ve PNG'yi PDF'e Çevir | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz görsel PDF dönüştürme aracı. JPEG, PNG ve WebP görsellerinizi hızlıca profesyonel PDF belgesine dönüştürün. Tarayıcıda çalışır, sunucuya yüklenmez.">
+  <meta name="keywords" content="jpeg pdf dönüştürme, png pdf çevirme, görsel pdf yapma, resim pdf, image to pdf, jpg to pdf">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/pdf/gorsel-pdf-donustur.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo">✦ HesapAraçları</a>
+  <ul class="nav-links">
+    <li><a href="/">Ana Sayfa</a></li>
+    <li data-dropdown>
+      <button class="nav-btn" aria-haspopup="true" aria-expanded="false">
+        Araçlar <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="dd-menu" role="menu">
+        <div class="dd-arrow"></div>
+        <span class="dd-section-label">📄 PDF Araçları</span>
+        <div class="dd-grid">
+          <a href="/tools/pdf/pdf-sikistir.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🗜️</div><div><div class="dd-item-name">PDF Sıkıştır</div></div></a>
+          <a href="/tools/pdf/pdf-birlestir.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📎</div><div><div class="dd-item-name">PDF Birleştir</div></div></a>
+          <a href="/tools/pdf/pdf-bol.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">✂️</div><div><div class="dd-item-name">PDF Böl</div></div></a>
+          <a href="/tools/pdf/pdf-gorsel-donustur.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">🖼️</div><div><div class="dd-item-name">PDF → Görsel</div></div></a>
+          <a href="/tools/pdf/gorsel-pdf-donustur.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(239,68,68,.1)">📄</div><div><div class="dd-item-name">Görsel → PDF</div></div></a>
+        </div>
+        <div class="dd-divider"></div>
+        <span class="dd-section-label">💰 Finans</span>
+        <div class="dd-grid">
+          <a href="/tools/kdv-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(99,102,241,.12)">🧾</div><div><div class="dd-item-name">KDV Hesaplama</div></div></a>
+          <a href="/tools/faiz-hesaplama.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📈</div><div><div class="dd-item-name">Faiz Hesaplama</div></div></a>
+          <a href="/tools/not-ortalamasi.html" class="dd-item"><div class="dd-item-icon" style="background:rgba(139,92,246,.12)">📚</div><div><div class="dd-item-name">Not Ortalaması</div></div></a>
+        </div>
+        <div class="dd-divider"></div>
+        <div class="dd-footer"><span class="dd-count">14 araç</span><a href="/tools/" class="dd-footer-link">Tümünü gör <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      </div>
+    </li>
+    <li><a href="/about.html">Hakkında</a></li>
+    <li><a href="/contact.html">İletişim</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Tema"></button>
+    <button class="hamburger" id="hamburger" aria-label="Menü">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+    </button>
+  </div>
+</div></nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a>
+  <a href="/tools/pdf/gorsel-pdf-donustur.html">📄 Görsel → PDF</a>
+  <a href="/tools/pdf/pdf-gorsel-donustur.html">🖼️ PDF → Görsel</a>
+  <a href="/tools/pdf/pdf-sikistir.html">🗜️ PDF Sıkıştır</a>
+  <a href="/tools/pdf/pdf-birlestir.html">📎 PDF Birleştir</a>
+  <a href="/tools/pdf/pdf-bol.html">✂️ PDF Böl</a>
+  <a href="/tools/kdv-hesaplama.html">🧾 KDV Hesaplama</a>
+</div>
+
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem">
+  <div class="ad-banner ad-banner-top">REKLAM · 728×90</div>
+</div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb">
+    <a href="/">Ana Sayfa</a><span class="sep">›</span>
+    <a href="/tools/">Araçlar</a><span class="sep">›</span>
+    <a href="/tools/pdf/">PDF Araçları</a><span class="sep">›</span>
+    <span class="current">Görsel → PDF</span>
+  </nav>
+  <div class="tool-hero-badge">📄 PDF Araçları</div>
+  <h1>Görsel'den PDF Oluştur</h1>
+  <p class="tool-hero-desc">JPEG, PNG veya WebP görsellerinizi sürükle-bırak ile sıralayın ve tek bir PDF belgesine dönüştürün. Tamamen tarayıcıda çalışır.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui">
+
+      <!-- Upload zone -->
+      <div class="pdf-upload-zone" id="uploadZone">
+        <input type="file" id="imgInput" accept="image/jpeg,image/png,image/webp" multiple aria-label="Görsel dosyaları seç">
+        <div class="upload-icon">🖼️</div>
+        <div class="upload-title">Görselleri sürükle bırak</div>
+        <p class="upload-sub">JPEG · PNG · WebP desteklenir · Birden fazla seçebilirsiniz</p>
+      </div>
+
+      <!-- Görsel listesi -->
+      <div id="imgListWrap" style="display:none; margin-top:1.25rem">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem">
+          <div class="form-label" style="margin:0">Görsel sırası <span style="font-size:.78rem;color:var(--muted)">(sürükle düzenle)</span></div>
+          <button class="btn btn-ghost" style="padding:.35rem .75rem;font-size:.8rem" onclick="clearImgs()">Temizle</button>
+        </div>
+        <div id="imgList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.75rem"></div>
+
+        <!-- Ayarlar -->
+        <div style="margin-top:1.5rem">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="pageSize">Sayfa Boyutu</label>
+              <select class="form-select" id="pageSize">
+                <option value="a4" selected>A4 (210×297 mm)</option>
+                <option value="a3">A3 (297×420 mm)</option>
+                <option value="letter">Letter (216×279 mm)</option>
+                <option value="fit">Görsele Uydur</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="orientation">Yön</label>
+              <select class="form-select" id="orientation">
+                <option value="portrait" selected>Dikey (Portrait)</option>
+                <option value="landscape">Yatay (Landscape)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="margin">Sayfa Kenar Boşluğu</label>
+            <select class="form-select" id="margin">
+              <option value="0">Yok (0 mm)</option>
+              <option value="10" selected>Küçük (10 mm)</option>
+              <option value="20">Orta (20 mm)</option>
+              <option value="30">Geniş (30 mm)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Her görsel ayrı sayfada mı?</label>
+            <div class="radio-tabs" style="margin-bottom:0">
+              <button class="radio-tab active" data-layout="separate">Ayrı sayfalar</button>
+              <button class="radio-tab" data-layout="auto">Otomatik yerleştir</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-box" style="margin:1.25rem 0 1.5rem">
+          <span class="note-box-icon">⚠️</span>
+          <span>Bu araç demo modundadır. Gerçek dönüşüm için <strong>jsPDF</strong> veya <strong>pdf-lib</strong> kütüphanesi entegre edin. Aşağıdaki indirme işlevi temsilidir.</span>
+        </div>
+
+        <button class="btn btn-primary" id="convertBtn" style="width:100%;justify-content:center;font-size:1rem;padding:1rem">
+          📄 PDF Oluştur
+        </button>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-bar-wrap" id="progressWrap">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+
+      <!-- Sonuç -->
+      <div class="result-card" id="resultCard">
+        <div class="result-label">PDF Oluşturuldu</div>
+        <div class="result-value" id="resultInfo">—</div>
+        <div class="result-breakdown">
+          <div class="result-item">
+            <div class="result-item-label">Toplam Sayfa</div>
+            <div class="result-item-value" id="resultPages">—</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Sayfa Boyutu</div>
+            <div class="result-item-value" id="resultPageSize">A4</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Yön</div>
+            <div class="result-item-value" id="resultOrientation">Dikey</div>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-accent" id="downloadBtn">⬇️ PDF'i İndir</button>
+          <button class="btn btn-ghost" onclick="clearImgs()">Yeni işlem</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nasıl kullanılır -->
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Nasıl Kullanılır?</h2>
+      <div class="how-to-steps">
+        <div class="how-step">
+          <div class="step-num">1</div>
+          <div class="step-content"><strong>Görselleri yükleyin</strong><p>JPEG, PNG veya WebP dosyalarınızı sürükleyin veya seçin. Birden fazla görsel ekleyebilirsiniz.</p></div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">2</div>
+          <div class="step-content"><strong>Sıralayın</strong><p>PDF'teki sayfa sırasını belirlemek için görselleri sürükle-bırak ile düzenleyin.</p></div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">3</div>
+          <div class="step-content"><strong>Ayarları yapın</strong><p>Sayfa boyutu (A4, A3, Letter), yön (dikey/yatay) ve kenar boşluğunu seçin.</p></div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">4</div>
+          <div class="step-content"><strong>PDF oluşturun ve indirin</strong><p>Butona basın; oluşturulan PDF dosyasını cihazınıza kaydedin.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kullanım alanları -->
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1rem">Ne İçin Kullanılır?</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem">
+        <div style="background:var(--bg-secondary);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
+          <span style="font-size:1.3rem;flex-shrink:0">📸</span>
+          <div><div style="font-size:.875rem;font-weight:500;margin-bottom:.25rem">Fotoğraf Albümü</div><div style="font-size:.78rem;color:var(--muted)">Tatil fotoğraflarınızı PDF albüme dönüştürün</div></div>
+        </div>
+        <div style="background:var(--bg-secondary);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
+          <span style="font-size:1.3rem;flex-shrink:0">🧾</span>
+          <div><div style="font-size:.875rem;font-weight:500;margin-bottom:.25rem">Makbuz / Fatura</div><div style="font-size:.78rem;color:var(--muted)">Telefon fotoğraflarını tek PDF'e toplayın</div></div>
+        </div>
+        <div style="background:var(--bg-secondary);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
+          <span style="font-size:1.3rem;flex-shrink:0">📋</span>
+          <div><div style="font-size:.875rem;font-weight:500;margin-bottom:.25rem">Portfolyo</div><div style="font-size:.78rem;color:var(--muted)">Tasarımlarınızı PDF sunum olarak kaydedin</div></div>
+        </div>
+        <div style="background:var(--bg-secondary);border-radius:10px;padding:1rem;display:flex;align-items:flex-start;gap:.75rem">
+          <span style="font-size:1.3rem;flex-shrink:0">📄</span>
+          <div><div style="font-size:.875rem;font-weight:500;margin-bottom:.25rem">Belge Tarama</div><div style="font-size:.78rem;color:var(--muted)">Taranan sayfaları tek PDF'de birleştirin</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Sık Sorulan Sorular</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Kaç görsel yükleyebilirim?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">İstediğiniz kadar görsel ekleyebilirsiniz. Pratik sınır tarayıcı belleğiyle ilgilidir; genellikle 50-100 görsel sorunsuz çalışır.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Görsellerimin kalitesi korunur mu?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Evet, görseller PDF'e orijinal kalitesiyle eklenir. Sayfa boyutuna uydurma işlemi görsel kalitesini bozmaz.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            WebP formatını destekliyor mu?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Evet, JPEG, PNG ve WebP formatlarını destekliyoruz. Diğer formatlar için önce görseli JPEG veya PNG'ye dönüştürmenizi öneririz.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Görsellerim güvende mi?
+            <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Evet. Tüm işlemler tarayıcınızda gerçekleşir; görselleriniz hiçbir sunucuya gönderilmez. Gizliliğiniz tam anlamıyla korunur.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">PDF Araçları</div>
+      <a href="/tools/pdf/pdf-gorsel-donustur.html" class="similar-tool-link"><div class="similar-tool-icon">🖼️</div>PDF → Görsel</a>
+      <a href="/tools/pdf/pdf-sikistir.html" class="similar-tool-link"><div class="similar-tool-icon">🗜️</div>PDF Sıkıştır</a>
+      <a href="/tools/pdf/pdf-birlestir.html" class="similar-tool-link"><div class="similar-tool-icon">📎</div>PDF Birleştir</a>
+      <a href="/tools/pdf/pdf-bol.html" class="similar-tool-link"><div class="similar-tool-icon">✂️</div>PDF Böl</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Diğer Araçlar</div>
+      <a href="/tools/kdv-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🧾</div>KDV Hesaplama</a>
+      <a href="/tools/bmi-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">⚖️</div>BMI Hesaplama</a>
+      <a href="/tools/yas-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🎂</div>Yaş Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">✦ HesapAraçları</a>
+      <p class="footer-tagline">Türkiye'nin en hızlı ücretsiz araçlar platformu.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">PDF Araçları</div>
+      <ul class="footer-links">
+        <li><a href="/tools/pdf/pdf-sikistir.html">PDF Sıkıştır</a></li>
+        <li><a href="/tools/pdf/pdf-birlestir.html">PDF Birleştir</a></li>
+        <li><a href="/tools/pdf/pdf-bol.html">PDF Böl</a></li>
+        <li><a href="/tools/pdf/pdf-gorsel-donustur.html">PDF → Görsel</a></li>
+        <li><a href="/tools/pdf/gorsel-pdf-donustur.html">Görsel → PDF</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Hesaplama</div>
+      <ul class="footer-links">
+        <li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li>
+        <li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li>
+        <li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li>
+        <li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <ul class="footer-links">
+        <li><a href="/about.html">Hakkımızda</a></li>
+        <li><a href="/contact.html">İletişim</a></li>
+        <li><a href="/privacy-policy.html">Gizlilik</a></li>
+        <li><a href="/sitemap.xml">Site Haritası</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 HesapAraçları. Tüm hakları saklıdır.</p>
+    <p class="footer-copy">Sonuçlar bilgi amaçlıdır.</p>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Başa dön">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script>
+let imgs = [];
+let layout = 'separate';
+let dragIdx = null;
+
+// Upload
+const zone = document.getElementById('uploadZone');
+const input = document.getElementById('imgInput');
+zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+zone.addEventListener('drop', e => {
+  e.preventDefault(); zone.classList.remove('drag-over');
+  handleFiles([...e.dataTransfer.files]);
+});
+input.addEventListener('change', () => handleFiles([...input.files]));
+
+function handleFiles(files) {
+  const valid = files.filter(f => f.type.startsWith('image/'));
+  if (!valid.length) { showToast('Lütfen geçerli görsel dosyaları seçin.', 'error'); return; }
+  valid.forEach(f => {
+    const url = URL.createObjectURL(f);
+    imgs.push({ file: f, url });
+  });
+  renderImgList();
+  document.getElementById('resultCard').classList.remove('show');
+  document.getElementById('progressWrap').classList.remove('show');
+  document.getElementById('progressFill').style.width = '0%';
+}
+
+function renderImgList() {
+  const wrap = document.getElementById('imgListWrap');
+  const list = document.getElementById('imgList');
+  if (!imgs.length) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  list.innerHTML = imgs.map((img, i) => `
+    <div draggable="true" data-i="${i}"
+      style="position:relative;border-radius:10px;overflow:hidden;border:1.5px solid var(--border-light);cursor:grab;transition:var(--transition);aspect-ratio:3/4;background:var(--bg-secondary)"
+      ondragstart="imgDragStart(event,${i})"
+      ondragover="imgDragOver(event)"
+      ondrop="imgDrop(event,${i})"
+      ondragleave="imgDragLeave(event)">
+      <img src="${img.url}" alt="Görsel ${i+1}"
+        style="width:100%;height:100%;object-fit:cover;display:block" loading="lazy">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.7));pointer-events:none"></div>
+      <div style="position:absolute;bottom:.4rem;left:.5rem;font-size:.7rem;font-weight:600;color:white">#${i+1}</div>
+      <button onclick="removeImg(${i})"
+        style="position:absolute;top:.4rem;right:.4rem;background:rgba(239,68,68,.85);color:white;border:none;border-radius:6px;width:22px;height:22px;cursor:pointer;font-size:.7rem;display:flex;align-items:center;justify-content:center;z-index:2">
+        ✕
+      </button>
+    </div>
+  `).join('');
+}
+
+function imgDragStart(e, i) { dragIdx = i; e.currentTarget.style.opacity = '.45'; }
+function imgDragOver(e) { e.preventDefault(); e.currentTarget.style.borderColor = 'var(--primary)'; }
+function imgDragLeave(e) { e.currentTarget.style.borderColor = 'var(--border-light)'; }
+function imgDrop(e, i) {
+  e.preventDefault(); e.currentTarget.style.borderColor = 'var(--border-light)';
+  if (dragIdx === null || dragIdx === i) { dragIdx = null; return; }
+  const moved = imgs.splice(dragIdx, 1)[0];
+  imgs.splice(i, 0, moved);
+  dragIdx = null;
+  renderImgList();
+}
+function removeImg(i) { imgs.splice(i, 1); renderImgList(); }
+function clearImgs() {
+  imgs = [];
+  renderImgList();
+  document.getElementById('resultCard').classList.remove('show');
+  document.getElementById('progressWrap').classList.remove('show');
+  document.getElementById('progressFill').style.width = '0%';
+  input.value = '';
+}
+
+// Layout tabs
+document.querySelectorAll('.radio-tab[data-layout]').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.radio-tab[data-layout]').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    layout = tab.dataset.layout;
+  });
+});
+
+// Convert
+document.getElementById('convertBtn')?.addEventListener('click', () => {
+  if (!imgs.length) { showToast('Lütfen en az bir görsel ekleyin.', 'error'); return; }
+  document.getElementById('convertBtn').disabled = true;
+
+  fakeProgress('progressWrap', () => {
+    const pageSize = document.getElementById('pageSize').value.toUpperCase();
+    const orient = document.getElementById('orientation').value === 'portrait' ? 'Dikey' : 'Yatay';
+    const pages = layout === 'separate' ? imgs.length : Math.ceil(imgs.length / 2);
+
+    document.getElementById('resultInfo').textContent = imgs.length + ' görsel PDF\'e dönüştürüldü';
+    document.getElementById('resultPages').textContent = pages + ' sayfa';
+    document.getElementById('resultPageSize').textContent = pageSize === 'FIT' ? 'Görsele Uydur' : pageSize;
+    document.getElementById('resultOrientation').textContent = orient;
+    document.getElementById('resultCard').classList.add('show');
+    document.getElementById('convertBtn').disabled = false;
+    showToast('PDF başarıyla oluşturuldu!');
+
+    document.getElementById('downloadBtn').onclick = () => {
+      // Demo: real implementation needs jsPDF/pdf-lib
+      showToast('Demo mod: Gerçek PDF için jsPDF entegre edin.', 'error');
+    };
+  });
+});
+</script>
+</body>
+</html>

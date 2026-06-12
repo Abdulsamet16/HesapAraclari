@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faiz Hesaplama - Aylık/Yıllık Faiz Hesapla | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz faiz hesaplama aracı. Aylık veya yıllık basit faiz hesaplayın. Anapara, faiz tutarı ve toplam tutarı anında görün.">
+  <meta name="keywords" content="faiz hesaplama, basit faiz hesaplama, aylık faiz hesaplama, yıllık faiz hesaplama, faiz hesaplayıcı">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/faiz-hesaplama.html">
+  <meta property="og:title" content="Faiz Hesaplama - Basit Faiz Hesaplayıcı">
+  <meta property="og:description" content="Aylık veya yıllık basit faiz hesaplayın.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://hesaparaclari.com/"},{"@type":"ListItem","position":2,"name":"Araçlar","item":"https://hesaparaclari.com/tools/"},{"@type":"ListItem","position":3,"name":"Faiz Hesaplama","item":"https://hesaparaclari.com/tools/faiz-hesaplama.html"}]}</script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="logo">✦ HesapAraçları</a>
+    <ul class="nav-links">
+      <li><a href="/">Ana Sayfa</a></li><li><a href="/tools/">Araçlar</a></li>
+      <li><a href="/about.html">Hakkında</a></li><li><a href="/contact.html">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Tema"></button>
+      <button class="hamburger" id="hamburger" aria-label="Menü"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a><a href="/tools/kdv-hesaplama.html">🧾 KDV Hesaplama</a>
+  <a href="/tools/faiz-hesaplama.html">📈 Faiz Hesaplama</a><a href="/tools/yuzde-hesaplama.html">% Yüzde Hesaplama</a>
+</div>
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem"><div class="ad-banner ad-banner-top">REKLAM · 728×90</div></div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/tools/">Araçlar</a><span class="sep">›</span><span class="current">Faiz Hesaplama</span>
+  </nav>
+  <div class="tool-hero-badge">💰 Finans Araçları</div>
+  <h1>Faiz Hesaplama</h1>
+  <p class="tool-hero-desc">Aylık veya yıllık basit faiz hesaplayın. Anapara, faiz tutarı ve toplam tutarı anında görün.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui" id="faizForm">
+      <div class="form-group">
+        <label class="form-label" for="anapara">Anapara (₺)</label>
+        <input class="form-input" type="number" id="anapara" placeholder="Örn: 10000" min="0" step="0.01" inputmode="decimal">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="faizOrani">Faiz Oranı (%)</label>
+          <input class="form-input" type="number" id="faizOrani" placeholder="Örn: 45" min="0" step="0.01" inputmode="decimal">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="faizSure">Süre</label>
+          <input class="form-input" type="number" id="faizSure" placeholder="Örn: 12" min="1" step="1" inputmode="numeric">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="faizPeriyot">Süre Birimi</label>
+        <select class="form-select" id="faizPeriyot">
+          <option value="ay">Ay</option>
+          <option value="yil">Yıl</option>
+        </select>
+      </div>
+
+      <div class="result-card" id="faizResult" role="region" aria-live="polite">
+        <div class="result-label">Faiz Tutarı</div>
+        <div class="result-value" id="faizMainResult">0,00 ₺</div>
+        <div class="result-breakdown">
+          <div class="result-item">
+            <div class="result-item-label">Anapara</div>
+            <div class="result-item-value" id="faizAnapara">0,00 ₺</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Faiz Tutarı</div>
+            <div class="result-item-value" id="faizTutar">0,00 ₺</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">Toplam</div>
+            <div class="result-item-value" id="faizToplam">0,00 ₺</div>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-ghost" onclick="copyToClipboard('Anapara: ' + document.getElementById('faizAnapara').textContent + '\nFaiz: ' + document.getElementById('faizTutar').textContent + '\nToplam: ' + document.getElementById('faizToplam').textContent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            Kopyala
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem;letter-spacing:-0.01em">Nasıl Kullanılır?</h2>
+      <div class="how-to-steps">
+        <div class="how-step"><div class="step-num">1</div><div class="step-content"><strong>Anapara girin</strong><p>Yatıracağınız veya aldığınız kredinin tutarını girin.</p></div></div>
+        <div class="how-step"><div class="step-num">2</div><div class="step-content"><strong>Faiz oranını girin</strong><p>Yıllık veya aylık faiz oranını yüzde olarak girin.</p></div></div>
+        <div class="how-step"><div class="step-num">3</div><div class="step-content"><strong>Süre ve birimi seçin</strong><p>Ay veya yıl cinsinden faiz süresini belirtin.</p></div></div>
+        <div class="how-step"><div class="step-num">4</div><div class="step-content"><strong>Sonucu görün</strong><p>Faiz tutarı ve toplam geri ödeme miktarı anında hesaplanır.</p></div></div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1rem">Basit Faiz Formülü</h2>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem">
+        Basit faiz hesabında kullanılan formül: <strong style="color:var(--text)">Faiz = Anapara × Oran/100 × Süre</strong> şeklindedir.
+        Örneğin 10.000 ₺ anapara için %45 yıllık faizle 1 yıl için: 10.000 × 0.45 × 1 = 4.500 ₺ faiz, toplam 14.500 ₺.
+      </p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8">
+        Aylık faiz hesaplarken süreyi yıla çeviriz: 6 ay = 0.5 yıl. Araçımız bu dönüşümü otomatik yapar.
+      </p>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Sık Sorulan Sorular</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Basit faiz ve bileşik faiz arasındaki fark nedir?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Basit faizde her dönem için faiz sadece anapara üzerinden hesaplanır. Bileşik faizde ise bir önceki dönemin faizi de anaparaya eklenerek hesaplama yapılır. Uzun vadeli yatırımlarda bileşik faiz daha yüksek getiri sağlar.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Aylık faizi yıllık faize nasıl çeviririm?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Basit faiz için aylık oranı 12 ile çarpın: Aylık %3.5 × 12 = Yıllık %42. Aracımız aylık veya yıllık girişi otomatik olarak işler.</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/kdv-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🧾</div>KDV Hesaplama</a>
+      <a href="/tools/yuzde-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">%</div>Yüzde Hesaplama</a>
+      <a href="/tools/indirim-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🏷️</div>İndirim Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="/" class="logo">✦ HesapAraçları</a><p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p></div>
+    <div><div class="footer-col-title">Finans</div><ul class="footer-links"><li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li><li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li><li><a href="/tools/yuzde-hesaplama.html">Yüzde Hesaplama</a></li></ul></div>
+    <div><div class="footer-col-title">Öğrenci</div><ul class="footer-links"><li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li><li><a href="/tools/vize-final-hesaplama.html">Vize Final</a></li><li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li></ul></div>
+    <div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="/about.html">Hakkımızda</a></li><li><a href="/contact.html">İletişim</a></li><li><a href="/privacy-policy.html">Gizlilik</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 HesapAraçları.</p><p class="footer-copy">Sonuçlar bilgi amaçlıdır.</p></div>
+</footer>
+<button class="back-to-top" id="backToTop" aria-label="Başa dön"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+</body>
+</html>

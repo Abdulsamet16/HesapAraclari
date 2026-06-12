@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Hesaplama - Vücut Kitle İndeksi Hesapla | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz BMI hesaplama aracı. Boy ve kilonuzu girerek vücut kitle indeksinizi, kategorinizi ve ideal kilo aralığınızı anında öğrenin.">
+  <meta name="keywords" content="bmi hesaplama, vücut kitle indeksi hesaplama, ideal kilo hesaplama, bki hesaplama, obezite hesaplama">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/bmi-hesaplama.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo">✦ HesapAraçları</a>
+  <ul class="nav-links"><li><a href="/">Ana Sayfa</a></li><li><a href="/tools/">Araçlar</a></li><li><a href="/about.html">Hakkında</a></li></ul>
+  <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Tema"></button><button class="hamburger" id="hamburger" aria-label="Menü"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a><a href="/tools/bmi-hesaplama.html">⚖️ BMI Hesaplama</a><a href="/tools/yas-hesaplama.html">🎂 Yaş Hesaplama</a>
+</div>
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem"><div class="ad-banner ad-banner-top">REKLAM · 728×90</div></div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb"><a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/tools/">Araçlar</a><span class="sep">›</span><span class="current">BMI Hesaplama</span></nav>
+  <div class="tool-hero-badge">📅 Günlük Araçlar</div>
+  <h1>BMI Hesaplama</h1>
+  <p class="tool-hero-desc">Boy ve kilonuzu girerek Vücut Kitle İndeksinizi (VKİ/BMI), kategorinizi ve ideal kilo aralığınızı öğrenin.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui" id="bmiForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="bmiboy">Boy (cm)</label>
+          <input class="form-input" type="number" id="bmiboy" placeholder="Örn: 175" min="50" max="250" inputmode="numeric">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="bmikilo">Kilo (kg)</label>
+          <input class="form-input" type="number" id="bmikilo" placeholder="Örn: 70" min="10" max="500" inputmode="numeric">
+        </div>
+      </div>
+
+      <div class="result-card" id="bmiResult" role="region" aria-live="polite">
+        <div class="result-label">BMI Değeriniz</div>
+        <div style="display:flex;align-items:baseline;gap:.75rem;flex-wrap:wrap">
+          <div class="result-value" id="bmiValue">0,00</div>
+          <div style="font-size:1.2rem;font-weight:700" id="bmiKategori">—</div>
+        </div>
+
+        <!-- BMI Scale -->
+        <div style="margin:1.25rem 0;position:relative">
+          <div style="height:10px;border-radius:100px;background:linear-gradient(to right,#60a5fa 0%,#22c55e 25%,#fbbf24 55%,#ef4444 80%);position:relative;overflow:visible">
+            <div id="bmiBar" style="position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:white;border:3px solid var(--bg);transform:translate(-50%,-50%);transition:left .4s;box-shadow:0 2px 8px rgba(0,0,0,.4);left:2%"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:.5rem;font-size:.7rem;color:var(--muted)">
+            <span>Zayıf<br>&lt;18.5</span>
+            <span style="text-align:center">Normal<br>18.5–25</span>
+            <span style="text-align:center">Fazla Kilolu<br>25–30</span>
+            <span style="text-align:right">Obez<br>&gt;30</span>
+          </div>
+        </div>
+
+        <div style="background:rgba(0,0,0,.2);border-radius:10px;padding:.875rem 1rem;font-size:.875rem;color:var(--muted);line-height:1.6;margin-bottom:1rem" id="bmiTavsiye">—</div>
+
+        <div class="result-breakdown">
+          <div class="result-item">
+            <div class="result-item-label">İdeal Kilo Aralığı (min)</div>
+            <div class="result-item-value" id="bmiIdealMin">—</div>
+          </div>
+          <div class="result-item">
+            <div class="result-item-label">İdeal Kilo Aralığı (max)</div>
+            <div class="result-item-value" id="bmiIdealMax">—</div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn btn-ghost" onclick="copyToClipboard('BMI: ' + document.getElementById('bmiValue').textContent + ' — ' + document.getElementById('bmiKategori').textContent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Kopyala
+          </button>
+          <button class="btn btn-ghost" onclick="shareResult('BMI Hesaplama', 'BMI Değerim: ' + document.getElementById('bmiValue').textContent + ' (' + document.getElementById('bmiKategori').textContent + ')')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>Paylaş
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BMI Tablosu -->
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">BMI Kategorileri (WHO)</h2>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:.875rem">
+          <thead><tr style="border-bottom:1px solid var(--border-light)">
+            <th style="text-align:left;padding:.75rem 1rem;color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">Kategori</th>
+            <th style="text-align:center;padding:.75rem 1rem;color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">BMI Aralığı</th>
+            <th style="text-align:right;padding:.75rem 1rem;color:var(--muted);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em">Durum</th>
+          </tr></thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-light)"><td style="padding:.7rem 1rem;color:var(--text)">Zayıf</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">&lt; 18.5</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#60a5fa;font-weight:600">⚠️ Dikkat</span></td></tr>
+            <tr style="border-bottom:1px solid var(--border-light)"><td style="padding:.7rem 1rem;color:var(--text)">Normal</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">18.5 – 24.9</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#22c55e;font-weight:600">✅ Sağlıklı</span></td></tr>
+            <tr style="border-bottom:1px solid var(--border-light)"><td style="padding:.7rem 1rem;color:var(--text)">Fazla Kilolu</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">25.0 – 29.9</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#fbbf24;font-weight:600">⚠️ Dikkat</span></td></tr>
+            <tr style="border-bottom:1px solid var(--border-light)"><td style="padding:.7rem 1rem;color:var(--text)">1. Derece Obez</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">30.0 – 34.9</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#fb923c;font-weight:600">🔴 Risk</span></td></tr>
+            <tr style="border-bottom:1px solid var(--border-light)"><td style="padding:.7rem 1rem;color:var(--text)">2. Derece Obez</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">35.0 – 39.9</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#ef4444;font-weight:600">🔴 Yüksek Risk</span></td></tr>
+            <tr><td style="padding:.7rem 1rem;color:var(--text)">3. Derece Obez</td><td style="padding:.7rem 1rem;text-align:center;color:var(--muted)">≥ 40.0</td><td style="padding:.7rem 1rem;text-align:right"><span style="color:#dc2626;font-weight:600">🔴 Çok Yüksek</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:1rem;line-height:1.6">* BMI tek başına sağlık durumunu yansıtmaz. Kas kitlesi yüksek kişilerde yanıltıcı olabilir. Doktorunuza danışın.</p>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Sık Sorulan Sorular</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">BMI formülü nedir?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">BMI = Kilo (kg) / Boy² (m²). Örnek: 70 kg, 1.75 m boyunda kişi için: 70 / (1.75 × 1.75) = 70 / 3.0625 = 22.9 BMI</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">BMI her yaş için aynı mı?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Hayır. Çocuk ve gençler için yaşa özel BMI persentilleri kullanılır. Bu araç 18 yaş üzeri yetişkinler içindir.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">İdeal kilo nedir?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">BMI 18.5–24.9 arasına karşılık gelen kilo ideal kabul edilir. Örneğin 175 cm boyunda biri için ideal kilo aralığı: 56.6 – 76.4 kg'dır.</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/yas-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🎂</div>Yaş Hesaplama</a>
+      <a href="/tools/yuzde-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">%</div>Yüzde Hesaplama</a>
+      <a href="/tools/indirim-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🏷️</div>İndirim Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="logo">✦ HesapAraçları</a><p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p></div><div><div class="footer-col-title">Finans</div><ul class="footer-links"><li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li><li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li></ul></div><div><div class="footer-col-title">Günlük</div><ul class="footer-links"><li><a href="/tools/yas-hesaplama.html">Yaş Hesaplama</a></li><li><a href="/tools/bmi-hesaplama.html">BMI Hesaplama</a></li></ul></div><div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="/about.html">Hakkımızda</a></li><li><a href="/privacy-policy.html">Gizlilik</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 HesapAraçları.</p></div></footer>
+<button class="back-to-top" id="backToTop" aria-label="Başa dön"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+</body>
+</html>

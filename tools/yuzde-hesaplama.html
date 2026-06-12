@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yüzde Hesaplama - Artış, Azalış ve Oran Hesapla | HesapAraçları</title>
+  <meta name="description" content="Ücretsiz yüzde hesaplama aracı. Yüzde oranı, artış/azalış ve bir sayının yüzdesini kolayca hesaplayın. Anında sonuç.">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/yuzde-hesaplama.html">
+  <meta property="og:title" content="Yüzde Hesaplama - Oranı Anında Hesapla">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo">✦ HesapAraçları</a>
+  <ul class="nav-links"><li><a href="/">Ana Sayfa</a></li><li><a href="/tools/">Araçlar</a></li><li><a href="/about.html">Hakkında</a></li></ul>
+  <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Tema"></button><button class="hamburger" id="hamburger" aria-label="Menü"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="/">🏠 Ana Sayfa</a><a href="/tools/kdv-hesaplama.html">🧾 KDV</a><a href="/tools/faiz-hesaplama.html">📈 Faiz</a><a href="/tools/yuzde-hesaplama.html">% Yüzde</a></div>
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem"><div class="ad-banner ad-banner-top">REKLAM · 728×90</div></div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb"><a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/tools/">Araçlar</a><span class="sep">›</span><span class="current">Yüzde Hesaplama</span></nav>
+  <div class="tool-hero-badge">💰 Finans Araçları</div>
+  <h1>Yüzde Hesaplama</h1>
+  <p class="tool-hero-desc">Yüzde oranı, artış/azalış ve bir sayının yüzdesini kolayca hesaplayın.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui">
+      <div class="radio-tabs" role="tablist">
+        <button class="radio-tab active" data-yuzde="oran" role="tab">Oran Hesapla</button>
+        <button class="radio-tab" data-yuzde="artis" role="tab">Artış/Azalış</button>
+        <button class="radio-tab" data-yuzde="uygula" role="tab">Yüzde Uygula</button>
+      </div>
+
+      <!-- Panel 1: Oran -->
+      <div class="yuzde-panel" data-panel="oran">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="y1">Sayı</label>
+            <input class="form-input" type="number" id="y1" placeholder="Örn: 25" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="y2">Toplam</label>
+            <input class="form-input" type="number" id="y2" placeholder="Örn: 100" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Artış/Azalış -->
+      <div class="yuzde-panel" data-panel="artis" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="y3">Eski Değer</label>
+            <input class="form-input" type="number" id="y3" placeholder="Örn: 1000" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="y4">Yeni Değer</label>
+            <input class="form-input" type="number" id="y4" placeholder="Örn: 1250" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Uygula -->
+      <div class="yuzde-panel" data-panel="uygula" style="display:none">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="y5">Sayı</label>
+            <input class="form-input" type="number" id="y5" placeholder="Örn: 500" inputmode="decimal">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="y6">Yüzde (%)</label>
+            <input class="form-input" type="number" id="y6" placeholder="Örn: 15" inputmode="decimal">
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card" id="yuzdeResult" role="region" aria-live="polite">
+        <div class="result-label" id="yuzdeDesc">Sonuç</div>
+        <div class="result-value" id="yuzdeMainResult">%0</div>
+        <div class="result-actions">
+          <button class="btn btn-ghost" onclick="copyToClipboard(document.getElementById('yuzdeMainResult').textContent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Kopyala
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1rem">Yüzde Formülleri</h2>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem"><strong style="color:var(--text)">Oran hesapla:</strong> (Sayı / Toplam) × 100. Örnek: 25/100 × 100 = %25</p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem"><strong style="color:var(--text)">Artış/azalış:</strong> ((Yeni - Eski) / Eski) × 100. Örnek: 1000'den 1250'ye: ((1250-1000)/1000) × 100 = %25 artış</p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8"><strong style="color:var(--text)">Yüzde uygula:</strong> Sayı × (Yüzde / 100). Örnek: 500'ün %15'i: 500 × 0.15 = 75</p>
+    </div>
+  </main>
+
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/kdv-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🧾</div>KDV Hesaplama</a>
+      <a href="/tools/faiz-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">📈</div>Faiz Hesaplama</a>
+      <a href="/tools/indirim-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🏷️</div>İndirim Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="logo">✦ HesapAraçları</a><p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p></div><div><div class="footer-col-title">Araçlar</div><ul class="footer-links"><li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li><li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li><li><a href="/tools/indirim-hesaplama.html">İndirim Hesaplama</a></li></ul></div><div><div class="footer-col-title">Öğrenci</div><ul class="footer-links"><li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li><li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li></ul></div><div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="/about.html">Hakkımızda</a></li><li><a href="/privacy-policy.html">Gizlilik</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 HesapAraçları.</p></div></footer>
+<button class="back-to-top" id="backToTop" aria-label="Başa dön"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+</body>
+</html>

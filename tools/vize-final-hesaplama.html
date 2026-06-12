@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vize Final Hesaplama - Dersten Geçme Notu Hesapla | HesapAraçları</title>
+  <meta name="description" content="Vize ve final notlarınızdan geçip geçmediğinizi öğrenin. Geçmek için gereken final notunu hesaplayın. Ağırlık oranlarını kendiniz belirleyin.">
+  <meta name="keywords" content="vize final hesaplama, geçme notu hesaplama, final notu hesaplama, vize ağırlığı hesaplama">
+  <link rel="canonical" href="https://hesaparaclari.com/tools/vize-final-hesaplama.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav class="navbar"><div class="navbar-inner">
+  <a href="/" class="logo">✦ HesapAraçları</a>
+  <ul class="nav-links"><li><a href="/">Ana Sayfa</a></li><li><a href="/tools/">Araçlar</a></li><li><a href="/about.html">Hakkında</a></li></ul>
+  <div class="nav-actions"><button class="theme-toggle" id="themeToggle" aria-label="Tema"></button><button class="hamburger" id="hamburger" aria-label="Menü"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button></div>
+</div></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">🏠 Ana Sayfa</a><a href="/tools/not-ortalamasi.html">📚 Not Ortalaması</a>
+  <a href="/tools/vize-final-hesaplama.html">📝 Vize Final</a><a href="/tools/yks-puan-hesaplama.html">🎓 YKS Puan</a>
+</div>
+<div style="max-width:1280px;margin:.75rem auto;padding:0 1.5rem"><div class="ad-banner ad-banner-top">REKLAM · 728×90</div></div>
+
+<div class="tool-hero">
+  <nav class="breadcrumb"><a href="/">Ana Sayfa</a><span class="sep">›</span><a href="/tools/">Araçlar</a><span class="sep">›</span><span class="current">Vize Final Hesaplama</span></nav>
+  <div class="tool-hero-badge">🎓 Öğrenci Araçları</div>
+  <h1>Vize Final Hesaplama</h1>
+  <p class="tool-hero-desc">Vize ve final notlarından geçip geçmediğinizi öğrenin, geçmek için gereken notu hesaplayın.</p>
+</div>
+
+<div class="tool-layout">
+  <main>
+    <div class="tool-card-ui" id="vizeForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="vizeNot">Vize Notu (0–100)</label>
+          <input class="form-input" type="number" id="vizeNot" placeholder="Örn: 65" min="0" max="100" inputmode="numeric" value="65">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="finalNot">Final Notu (0–100)</label>
+          <input class="form-input" type="number" id="finalNot" placeholder="Örn: 70" min="0" max="100" inputmode="numeric" value="70">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="vizeAgirligi">
+          Vize Ağırlığı: <strong id="vizeAgirlikLabel" style="color:var(--primary)">%40</strong>
+          &nbsp;→&nbsp; Final Ağırlığı: <strong id="finalAgirlikLabel" style="color:var(--secondary)">%60</strong>
+        </label>
+        <input type="range" id="vizeAgirligi" min="10" max="70" value="40" step="10"
+          style="width:100%;accent-color:var(--primary);cursor:pointer;margin-top:.25rem"
+          oninput="document.getElementById('vizeAgirlikLabel').textContent='%'+this.value; document.getElementById('finalAgirlikLabel').textContent='%'+(100-this.value)">
+      </div>
+
+      <div class="result-card" id="vizeResult" role="region" aria-live="polite">
+        <div class="result-label">Dönem Sonu Ortalaması</div>
+        <div class="result-value" id="vizeOrtalama">0,00</div>
+
+        <div style="display:flex;align-items:center;gap:.75rem;margin-top:.875rem;padding:.875rem 1rem;background:rgba(0,0,0,.2);border-radius:10px">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0" id="vizeDurumDot"></div>
+          <div>
+            <div style="font-size:1.05rem;font-weight:700" id="vizeDurum">—</div>
+            <div style="font-size:.8rem;color:var(--muted);margin-top:.15rem" id="vizeGerekli">—</div>
+          </div>
+        </div>
+
+        <div class="result-actions" style="margin-top:1rem">
+          <button class="btn btn-ghost" onclick="copyToClipboard('Ortalama: ' + document.getElementById('vizeOrtalama').textContent + ' — ' + document.getElementById('vizeDurum').textContent)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>Kopyala
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1rem">Vize-Final Hesaplama Formülü</h2>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem">
+        Dönem sonu notu şu formülle hesaplanır:<br>
+        <strong style="color:var(--text)">Ortalama = (Vize × Vize Ağırlığı) + (Final × Final Ağırlığı)</strong>
+      </p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8;margin-bottom:.875rem">
+        Örnek: Vize 65, Final 70, ağırlıklar %40 ve %60 ise:<br>
+        <strong style="color:var(--text)">(65 × 0,40) + (70 × 0,60) = 26 + 42 = 68</strong>
+      </p>
+      <p style="font-size:.9rem;color:var(--muted);line-height:1.8">
+        Geçmek için gereken final notu: <strong style="color:var(--text)">(50 − Vize × Vize Ağırlığı) / Final Ağırlığı</strong>
+      </p>
+    </div>
+
+    <div class="tool-card-ui">
+      <h2 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:1.25rem">Sık Sorulan Sorular</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Geçme notu kaçtır?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Türkiye'deki çoğu üniversitede dönem sonu ortalamasının en az 50 olması gerekir. Bazı bölümlerde bu oran 60'a kadar çıkabilir.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Vize ağırlığı kaç olmalı?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">En yaygın dağılım %40 vize / %60 finaldir. Bazı dersler %30/%70 veya %50/%50 ağırlık kullanabilir. Ders bilgi paketini veya öğretim üyenizi kontrol edin.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Finalden 0 alsam ne olur?<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Bazı üniversitelerde finalde en az 45 veya 50 alma şartı olabilir. Ayrıca finale giremeyen öğrenci otomatik olarak başarısız sayılır.</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="tool-sidebar">
+    <div class="ad-banner" style="height:250px">REKLAM · 300×250</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-title">Benzer Araçlar</div>
+      <a href="/tools/not-ortalamasi.html" class="similar-tool-link"><div class="similar-tool-icon">📚</div>Not Ortalaması</a>
+      <a href="/tools/yks-puan-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">🎓</div>YKS Puan Hesaplama</a>
+      <a href="/tools/yuzde-hesaplama.html" class="similar-tool-link"><div class="similar-tool-icon">%</div>Yüzde Hesaplama</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><a href="/" class="logo">✦ HesapAraçları</a><p class="footer-tagline">Türkiye'nin en hızlı ücretsiz hesaplama araçları.</p></div><div><div class="footer-col-title">Finans</div><ul class="footer-links"><li><a href="/tools/kdv-hesaplama.html">KDV Hesaplama</a></li><li><a href="/tools/faiz-hesaplama.html">Faiz Hesaplama</a></li></ul></div><div><div class="footer-col-title">Öğrenci</div><ul class="footer-links"><li><a href="/tools/not-ortalamasi.html">Not Ortalaması</a></li><li><a href="/tools/vize-final-hesaplama.html">Vize Final</a></li><li><a href="/tools/yks-puan-hesaplama.html">YKS Puan</a></li></ul></div><div><div class="footer-col-title">Platform</div><ul class="footer-links"><li><a href="/about.html">Hakkımızda</a></li><li><a href="/privacy-policy.html">Gizlilik</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">© 2025 HesapAraçları.</p></div></footer>
+<button class="back-to-top" id="backToTop" aria-label="Başa dön"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/tools.js"></script>
+<script>
+  // Update durum dot color
+  const vizeDurumEl = document.getElementById('vizeDurum');
+  if (vizeDurumEl) {
+    const obs = new MutationObserver(() => {
+      const dot = document.getElementById('vizeDurumDot');
+      if (dot) dot.style.background = vizeDurumEl.style.color || 'var(--accent)';
+    });
+    obs.observe(vizeDurumEl, { attributes: true, attributeFilter: ['style'], childList: true, subtree: true });
+  }
+</script>
+</body>
+</html>
