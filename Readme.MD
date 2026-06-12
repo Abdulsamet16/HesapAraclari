@@ -1,4 +1,4 @@
-Markdown
+
 # 🧮 Hesap Araçları (All-in-One Calculation Hub)
 
 > Günlük hayatta, finans dünyasında ve matematiksel işlemlerde ihtiyaç duyulan tüm hesaplama araçlarını tek bir minimalist arayüzde toplayan, modern ve hızlı bir web platformu.
